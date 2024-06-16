@@ -1,0 +1,59 @@
+<html>
+
+<head>
+	<title>Login1 form</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script>
+		function validateform() {
+			var femail = document.myform.femail.value;
+			var fpass = document.myform.fpass.value;
+
+			if (femail == null || femail == "") {
+				alert("Femail can't be blank");
+				return false;
+			}
+			else if (fpass.length < 6) {
+				alert("Fpass must be at least 6 characters long.");
+				return false;
+			}
+		}  
+	</script>
+</head>
+<style>
+	body {
+		color: black;
+		font-size: 15px;
+	}
+
+	.formerror {
+		color: red;
+	}
+</style>
+
+<body>
+	<div class="container">
+		<form name="myform" method="post"
+			action="https://script.google.com/macros/s/AKfycbyitzdfDS-s_NmNpZcpR_oCB_8yLl6PhHXdunvudEZWfM6QZKaQ8DDcQvJB9GxR9s0Zaw/exec"
+			onsubmit="return validateform()">
+			<h2><u>Login form</u></h2>
+			<br>
+			E-mail:
+			<input type="text" placeholder="email" name="femail">
+			<br>
+			<br>
+			Password:
+			<input type="password" placeholder="Password" name="fpass">
+			<br>
+			<br>
+			<a href="forget.html">Forget password?</a>
+			<br>
+			<br>
+			<button class="btn btn-danger" type="reset" value="reset">Reset</button>
+			<button class="btn btn-primary" type="submit" value="submit">Submit</button>
+		</form>
+	</div>
+</body>
+
+</html>
