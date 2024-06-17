@@ -58,14 +58,25 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
-
+		.video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            z-index: -1; /* Ensure the video is behind other content */
+        }
 	</style>	
 </head>
 <body>
 	<div id="preloader">
 	</div>
+	<video autoplay muted loop class="video-background">
+        <source src="waters.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 	<div class="container">
-		<div class="form-container" style="background-color: white; color:black; padding: 30px 30px 30px 30px; border-radius:20px; border: solid black;">
+		<div class="form-container" style="background-color: lightblue; color:black; padding: 30px 30px 30px 30px; border-radius:20px; border: solid black;">
 			<form name="myform" method="post"
 			action="https://script.google.com/macros/s/AKfycbwOxRy8cbBJCtV_hu_JjukprUPfTfHgS6kLD1pun4tEP-rtIa9cOdzDzcaog9XqxtIc-g/exec"
 			onsubmit="return validateform()">
